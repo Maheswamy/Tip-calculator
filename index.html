@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <!-- Bill
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+  Number of People
+  Tip Amount
+  / person
+  Total
+  / person
+  Reset -->
+    <section class="container">
+      <div class="selection_section">
+        <div class="hell">
+          <p class="total-para">Bill</p>
+          <input
+            type="text"
+            name="total-bill"
+            id="total-bill"
+            placeholder="Enter the amount"
+          />
+        </div>
+        <div>
+          <p class="paragraph-tip">Select Tip %</p>
+          <div class="tip-grid">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input
+              type="number"
+              name="custom"
+              id="custom"
+              placeholder="custom"
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <p class="no-person">No of person</p>
+            <input
+              type="text"
+              name="no-of-person"
+              id="no-of-person"
+              placeholder="Number of Person"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="calculation_section">
+        <div class="top-cal-section">
+          <div class="tip-amount-section">
+            <div class="tip-heading">
+              Tip amount <span class="per-person">/person</span>
+            </div>
+            <div class="tip-amount-display">₹0.00</div>
+          </div>
+          <div class="total-amount-section">
+            <div class="total-heading">
+              Total amount <span class="per-person">/person</span>
+            </div>
+            <div class="total-amount-display">₹0.00</div>
+          </div>
+        </div>
+        <input type="reset" value="Reset" class="reset-btn" />
+      </div>
+    </section>
+  </body>
+</html>
