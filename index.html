@@ -33,8 +33,10 @@
       <div class="selection_section">
         <div class="hell">
           <p class="total-para">Bill</p>
+          <p id="zero-amount">can't be zero</p>
           <input
-            type="text"
+            type="number"
+            min="0"
             name="total-bill"
             id="total-bill"
             placeholder="Enter the amount"
@@ -43,22 +45,25 @@
         <div>
           <p class="paragraph-tip">Select Tip %</p>
           <div class="tip-grid">
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
+            <button onclick="fivePercent()">5%</button>
+            <button onclick="tenPercent()">10%</button>
+            <button onclick="fifteenPercent()">15%</button>
+            <button onclick="twoFivePercent()">25%</button>
+            <button onclick="fiftyPercent()">50%</button>
             <input
               type="number"
               name="custom"
               id="custom"
               placeholder="custom"
+              min-value="0"
+              oninput="customValue()"
             />
           </div>
         </div>
         <div>
           <div>
-            <p class="no-person">No of person</p>
+            <p class="no-person">Number of person</p>
+            <p id="zero-person">can't be zero</p>
             <input
               type="text"
               name="no-of-person"
@@ -74,16 +79,21 @@
             <div class="tip-heading">
               Tip amount <span class="per-person">/person</span>
             </div>
-            <div class="tip-amount-display">₹0.00</div>
+            <div class="tip-amount-display" id="tipPerPerson">₹0.00</div>
           </div>
           <div class="total-amount-section">
             <div class="total-heading">
               Total amount <span class="per-person">/person</span>
             </div>
-            <div class="total-amount-display">₹0.00</div>
+            <div class="total-amount-display" id="totalPerPerson">₹0.00</div>
           </div>
         </div>
-        <input type="reset" value="Reset" class="reset-btn" />
+        <input
+          type="reset"
+          value="Reset"
+          class="reset-btn"
+          onclick="clearFunction()"
+        />
       </div>
     </section>
   </body>

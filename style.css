@@ -11,7 +11,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
   position: absolute;
-  width: 800px;
+  max-width: 1200px;
   min-height: 400px;
   top: 50%;
   left: 50%;
@@ -34,6 +34,16 @@ body {
   font-size: 14px;
   padding-bottom: 10px;
   font-family: "Space Mono", monospace;
+  display: inline;
+}
+#zero-amount {
+  margin-top: 10px;
+  margin-left: 50px;
+  color: hsl(0, 79%, 45%);
+  font-size: 14px;
+  font-family: "Space Mono", monospace;
+  display: inline;
+  opacity: 0;
 }
 
 #total-bill {
@@ -41,7 +51,7 @@ body {
   width: 320px;
   background-color: hsl(189, 41%, 97%);
   font-family: "Space Mono", monospace;
-  border: none;
+  border: transparent;
   border-radius: 5px;
   text-indent: 20px;
 }
@@ -53,15 +63,25 @@ body {
   margin-top: 10px;
   color: hsl(186, 14%, 43%);
   font-size: 14px;
-  padding-bottom: 10px;
   font-family: "Space Mono", monospace;
+  display: inline;
+}
+#zero-person {
+  margin-top: 10px;
+  margin-left: 30px;
+  color: hsl(0, 79%, 45%);
+  font-size: 14px;
+  font-family: "Space Mono", monospace;
+  display: inline;
+  opacity: 0;
 }
 #no-of-person {
   height: 40px;
   width: 320px;
+  margin-top: 10px;
   background-color: hsl(189, 41%, 97%);
   font-family: "Space Mono", monospace;
-  border: none;
+  border-color: transparent;
   border-radius: 5px;
   text-indent: 20px;
 }
@@ -90,6 +110,10 @@ body {
   color: hsl(185, 41%, 84%);
   font-size: 16px;
 }
+.tip-grid button:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+}
 #custom {
   background-color: hsl(185, 41%, 84%);
   color: hsl(172, 67%, 45%);
@@ -101,7 +125,7 @@ body {
 }
 .calculation_section {
   margin: 25px;
-  width: 350px;
+  width: 600px;
   background-color: hsl(183, 100%, 15%);
   border-radius: 10px;
   padding: 40px 30px;
@@ -113,7 +137,7 @@ body {
 .top-cal-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 10px;
 }
 .tip-amount-section,
@@ -148,4 +172,13 @@ body {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 16px;
+}
+.reset-btn:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
